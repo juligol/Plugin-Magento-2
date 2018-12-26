@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="pickit_post_listing"/>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Doublepoint\Pickit\Block\Adminhtml\Url" name="url" template="Doublepoint_Pickit::url.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

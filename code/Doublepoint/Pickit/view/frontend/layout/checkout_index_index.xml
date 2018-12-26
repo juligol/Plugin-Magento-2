@@ -1,0 +1,58 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="content">
+            <block class="Doublepoint\Pickit\Block\Configuracion" before="checkout.root" template="Doublepoint_Pickit::configuracion.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="checkout.root">
+			<arguments>
+				<argument name="jsLayout" xsi:type="array">
+					<item name="components" xsi:type="array">
+						<item name="checkout" xsi:type="array">
+							<item name="children" xsi:type="array">
+								<item name="steps" xsi:type="array">
+									<item name="children" xsi:type="array">
+										<item name="shipping-step" xsi:type="array">
+											<item name="children" xsi:type="array">
+												<item name="shippingAddress" xsi:type="array">
+													<item name="children" xsi:type="array">
+                                                        <item name="shipping-address-fieldset" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="country_id" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">1000</item>
+                                                                </item>
+																<item name="region_id" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">1001</item>
+                                                                </item>
+																<item name="region" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">1002</item>
+                                                                </item>
+                                                                <item name="city" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">1003</item>
+                                                                </item>
+																<item name="postcode" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">1004</item>
+                                                                </item>
+																<item name="telephone" xsi:type="array">
+                                                                    <item name="sortOrder" xsi:type="string">1005</item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+													<item name="config" xsi:type="array">
+														<item name="template" xsi:type="string">Doublepoint_Pickit/shipping</item>
+														<item name="shippingMethodItemTemplate" xsi:type="string">Doublepoint_Pickit/custom-method-item-template</item>
+														<item name="shippingMethodListTemplate" xsi:type="string">Doublepoint_Pickit/custom-method-list-template</item>
+													</item>
+												</item>
+											</item>
+										</item>
+									</item>
+								</item>
+							</item>
+						</item>
+					</item>
+				</argument>
+			</arguments>
+        </referenceBlock>
+    </body>
+</page>

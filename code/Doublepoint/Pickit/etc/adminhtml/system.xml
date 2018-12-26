@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <group id="pickit" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Pickit - Configuración global</label>
+                <field id="global_testmode" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Modo Testeo:</label>
+                    <source_model>Doublepoint\Pickit\Model\Config\TestMode</source_model>
+                    <comment><![CDATA[Habilitar o deshabilitar el modo testeo para probarlo en distintos entornos.]]></comment>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="name" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Method Name</label>
+                </field>
+                <field id="link_text" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Texto del link:</label>
+                    <comment><![CDATA[Texto del link para abrir el panel PickIt.]]></comment>
+                </field>
+                <field id="apikey" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>ApiKey (Retailer):</label>
+                </field>
+                <field id="apikey_webapp" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>ApiKey (WebApp):</label>
+                    <comment><![CDATA[Esta ApiKey se utiliza para obtener detalles de la transaccion (Por ej: etiqueta).]]></comment>
+                </field>
+                <field id="token_id" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Token ID:</label>
+                </field>
+                <field id="url_webservice_prod" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>URL WebService:</label>
+                </field>
+                <field id="url_webservice_test" translate="label" type="text" sortOrder="8" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>URL WebService (Test):</label>
+                    <comment><![CDATA[Se usara este WS cuando el Modo Testeo se encuentre habilitado.]]></comment>
+                </field>
+                <field id="unidadpeso" translate="label" type="select" sortOrder="9" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Peso del producto en:</label>
+                    <source_model>Doublepoint\Pickit\Model\Config\UnidadPeso</source_model>
+                </field>
+                <field id="atributo_peso" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Atributo peso:</label>
+                    <source_model>Doublepoint\Pickit\Model\Config\AtributoPeso</source_model>
+                </field>
+                <field id="global_idusuario" translate="label" type="select" sortOrder="11" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Identificación de Usuario:</label>
+                    <source_model>Doublepoint\Pickit\Model\Config\IdUsuario</source_model>
+                </field>
+                <field id="disponibleretiro" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Disponible para colecta:</label>
+                    <source_model>Doublepoint\Pickit\Model\Config\DisponibleRetiro</source_model>
+                </field>
+                <field id="global_imposicion" translate="label" type="select" sortOrder="13" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Imposición:</label>
+                    <source_model>Doublepoint\Pickit\Model\Config\Imposicion</source_model>
+                </field>
+                <field id="sallowspecific" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Disponible en:</label>
+                    <frontend_class>shipping-applicable-country</frontend_class>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="16" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Envio a distintos paises</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="active" translate="label" type="select" sortOrder="17" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Habilitado</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="description" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Descripción</label>
+                </field>
+                <field id="descripcion_precio_default" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Descripción precio default:</label>
+                </field>
+                <field id="precio" translate="label" type="select" sortOrder="22" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Precio:</label>
+                    <source_model>Doublepoint\Pickit\Model\Config\Precio</source_model>
+                </field>
+                <field id="regla" translate="label" type="text" sortOrder="23" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Precio Personalizado (%):</label>
+                    <comment><![CDATA[Usar . en valores con decimales<br> <span class="notice">Ejemplo: 20.83 </span>]]></comment>
+                    <validate>validate-number</validate>
+                    <depends>
+                        <field id="precio">porcentaje</field>
+                    </depends>
+                </field>
+                <field id="preciofijo" translate="label" type="text" sortOrder="24" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Precio Fijo:</label>
+                    <comment><![CDATA[Usar . en valores con decimales<br> <span class="notice">Ejemplo: 20.83 </span>]]></comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <depends>
+                        <field id="precio">fijo</field>
+                    </depends>
+                </field>
+                <field id="show_method" translate="label" type="select" sortOrder="25" showInDefault="1" showInWebsite="1"
+                       showInStore="0">
+                    <label>Show Method if Not Applicable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="specific_error_msg" translate="label" type="textarea" sortOrder="26" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Mensaje de error</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

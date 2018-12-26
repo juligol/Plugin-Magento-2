@@ -1,0 +1,14 @@
+<button class="action-menu-item" if="!$row().estado && jQuery('#imposicionPickit').val() == 'noimponer'" data-bind="text: 'Imponer', event: {click: imponerTransaccionEnvioV2.bind($data, $row())}">
+</button>
+<button class="action-menu-item" if="$row().estado" data-bind="event: {click: generateTicket.bind($data, $row())}">
+    Imprimir Etiqueta
+</button>
+<div attr="'id': 'etiquetaDiv' + $row().post_id" if="$row().estado" style="display:none;">
+    <center>
+        <button data-bind="event: {click: print.bind($data, $row())}">Imprimir</button>
+    </center>
+    <div attr="'id': 'etiquetaDivImprimir' + $row().post_id">
+        <iframe attr="'id': 'etiquetaImg' + $row().post_id" width="950" height="510" frameborder="0" 
+                style="border:0;" allowfullscreen/>
+    </div>
+</div>

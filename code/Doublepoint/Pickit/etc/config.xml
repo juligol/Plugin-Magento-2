@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <pickit>
+                <model>Doublepoint\Pickit\Model\Carrier\Shipping</model>
+				<global_testmode>1</global_testmode>
+                <title>Pickit</title>
+                <name>Pickit</name>
+                <link_text>Seleccione su punto Pickit</link_text>
+                <apikey>ZN1RW43VO4</apikey>
+                <!--apikey>apiKeyRetailer1</apikey-->
+                <apikey_webapp>apiKeyWebAppRetailer</apikey_webapp>
+                <token_id>YRG7VW2Q5V</token_id>
+                <url_webservice_prod>https://core.pickitlabs.com/app.php/CallMethod</url_webservice_prod>
+                <url_webservice_test>https://core.pickitlabs.com/app.php/CallMethod</url_webservice_test>
+                <unidadpeso>kg</unidadpeso>
+                <atributo_peso>weight</atributo_peso>
+                <global_idusuario>taxvat</global_idusuario>
+                <disponibleretiro>imponer</disponibleretiro>
+                <global_imposicion>noimponer</global_imposicion>
+                <sallowspecific>1</sallowspecific>
+                <specificcountry>AR</specificcountry>
+                <active>1</active>
+                <description><![CDATA[Recibí el pedido en tu casa.]]></description>
+                <descripcion_precio_default>Cotización según Punto Pickit</descripcion_precio_default>
+                <precio>automatico</precio>
+                <regla>150</regla>
+                <preciofijo>20</preciofijo>
+                <show_method>0</show_method>
+                <specific_error_msg>Este método de envío no está disponible. Para utilizarlo por favor contáctenos.</specific_error_msg>
+            </pickit>
+        </carriers>
+    </default>
+</config>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Doublepoint_Pickit::pickit" title="Pickit" translate="title" module="Doublepoint_Pickit" parent="Magento_Sales::sales" sortOrder="50" dependsOnModule="Doublepoint_Pickit" resource="Doublepoint_Pickit::pickit"/>
+		<add id="Doublepoint_Pickit::pickit_adminEnvios" title="Administrar envíos" translate="title" module="Doublepoint_Pickit" parent="Doublepoint_Pickit::pickit" sortOrder="10" dependsOnModule="Doublepoint_Pickit" action="pickit/post/index" resource="Doublepoint_Pickit::pickit"/>
+	</menu>
+</config>
